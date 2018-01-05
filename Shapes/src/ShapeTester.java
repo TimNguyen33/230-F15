@@ -8,21 +8,26 @@ public class ShapeTester {
 		
 		// TODO each team should initialize 
 		// a shape & add to shapes
-		//Shape triangle 	= new Triangle();
+		//Shape triangle = new Triangle();
 		//shapes.add(triangle);
-	    Shape circle 	= new Circle();
-	    Shape triangle 	= new Triangle(10.5);
-
-		Shape pentagon 	= new Pentagon();
+	    Shape circle = new Circle();
+	    Shape triangle = new Triangle(10.5);
+	    Shape pentagon = new Pentagon();
+		Shape hexagon = new Hexagon();
+		Shape square = new Square();
+		Shape octagon = new Octagon();
+		
 		shapes.add(pentagon);
-		Shape hexagon	= new Hexagon();
 		shapes.add(hexagon);
-		Shape square = new Square();		
 		shapes.add(square);
 		shapes.add(circle);
 		shapes.add(triangle);
+		shapes.add(octagon);
+		
+		
 		
 		for (Shape shape : shapes) {
+			shape.setSideLength(5);
 			String s = 	"---------- "+ shape.getClass() +" --------- \n";
 			
 			s +=			"Side Length: " + shape.getSideLength()+"\n";
@@ -32,7 +37,6 @@ public class ShapeTester {
 			s +=			"Height:		  " + shape.getHeight()+"\n";
 			s +=			"Width:		  " + shape.getWidth()+"\n";
 			s +=			"Angle:		  " + shape.getInteriorAngle()+"\n";
-			shape.setSideLength(5);
 			s +=			"New Length:  " + shape.getSideLength()+"\n";
 			//s +=			"-------------------------------------";
 			System.out.println(s);
